@@ -30,10 +30,10 @@ import (
 )
 
 type User struct {
-    Uid   int    `v:"uid      @integer|min:1#|请输入用户ID"`
+    Uid   int    `v:"uid      @integer|min:1#请输入用户ID"`
     Name  string `v:"name     @required|length:6,30#请输入用户名称|用户名称长度非法"`
     Pass1 string `v:"password1@required|password3"`
-    Pass2 string `v:"password2@required|password3|same:Pass1#|密码格式不合法|两次密码不一致，请重新输入"`
+    Pass2 string `v:"password2@required|password3|same:Pass1#密码格式不合法|两次密码不一致，请重新输入"`
 }
 
 func main() {
